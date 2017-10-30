@@ -1,23 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                        <example></example>
-                    You are logged in!
-                </div>
-            </div>
+    <div class="container" style="margin: 50px;">
+        <div class="title">
+            Nucleons
         </div>
+        <div class="subtitle">
+            Online Test Series<br>
+            <a href="{{ route('gate_instruction') }}"> <button id="test" class="btn btn-primary">Start </button></a>
+        </div>
+
     </div>
-</div>
 @endsection
