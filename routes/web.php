@@ -19,3 +19,8 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/gate_test/instruction', ['as' => 'gate_instruction' , function () {
     return view('gateTest.instruction');
 }]);
+
+Route::get('auth/{provider}', 'Auth\SocialiteController@redirectToProvider');
+Route::get('auth/{provider}/callback', 'Auth\SocialiteController@handleProviderCallback');
+
+Route::post('auth/socialite', 'Auth\SocialiteController@numberRegister')->name('socialite');

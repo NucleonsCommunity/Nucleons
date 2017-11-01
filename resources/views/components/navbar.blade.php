@@ -49,7 +49,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
             <ul class="nav navbar-nav nav_1">
-                <li class="current_page"><a href="index.html">Home</a></li>
+                <li class="current_page"><a href="{{ route('home') }}">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="classified.html">Classified Ads</a></li>
                 <li><a href="classified_database.html">Database</a></li>
