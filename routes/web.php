@@ -24,3 +24,10 @@ Route::get('auth/{provider}', 'Auth\SocialiteController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\SocialiteController@handleProviderCallback');
 
 Route::post('auth/socialite', 'Auth\SocialiteController@numberRegister')->name('socialite');
+
+Route::middleware('auth')->group(function () {
+    Route::post('authentication/change_password', 'Auth\ChangePassword@changePassword')->name('change_password');
+    Route::get('authentication/change_password', function () {
+        return view('auth.passwords.change_password');
+    })->name('get_change_password');
+});

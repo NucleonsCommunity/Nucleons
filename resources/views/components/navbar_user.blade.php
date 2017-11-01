@@ -24,7 +24,7 @@
                 <div class="navbar-footer-content">
                     <div class="row">
                         <div class="col-md-6">
-                            <a href="#" class="btn btn-default btn-sm">Change Passowrd</a>
+                            <a href="{{ route('get_change_password') }}" class="btn btn-default btn-sm">Change Passowrd</a>
                         </div>
                         <div class="col-md-6">
                             <form action="{{ route('logout') }}" method="POST">

@@ -4,6 +4,9 @@ namespace Nucleons\Http\Controllers\Auth;
 
 use Nucleons\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
+use Illuminate\Http\Request;
+use Auth;
+use Nucleons\User;
 
 class ResetPasswordController extends Controller
 {
@@ -25,7 +28,7 @@ class ResetPasswordController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -36,4 +39,6 @@ class ResetPasswordController extends Controller
     {
         $this->middleware('guest');
     }
+
+
 }
